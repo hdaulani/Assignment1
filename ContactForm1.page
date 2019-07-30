@@ -1,0 +1,18 @@
+<apex:page standardController="Contact" extensions="ContactController">
+	<apex:form >
+    
+        <apex:pageBlock title="Edit or Insert Contact">
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!Contact.FirstName}"/>
+                <apex:inputField value="{!Contact.LastName}"/>        
+                <apex:inputField value="{!Contact.Email}"/>        
+                <apex:inputField value="{!Contact.Phone}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!saveContact}" value="Save" /> 
+                <apex:commandButton action="{!cancel}" value="Cancel" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    
+    </apex:form>
+</apex:page>
