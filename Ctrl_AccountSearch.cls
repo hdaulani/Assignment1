@@ -1,11 +1,11 @@
 public with sharing class Ctrl_AccountSearch {
-	private static final String v1 = '';
+	
     String BaseQuery = 'select Id, Name, BillingCity, BillingState, BillingCountry from Account';
     String FinalQuery = BaseQuery;
     String whereStringbillingCity = '';
     String whereStringbillingState = '';
     String whereStringbillingCountry = '';
-    String WhrCondition; 
+    
     String LimitString = ' Limit 10';
     public List<Account> accounts 
     { 
