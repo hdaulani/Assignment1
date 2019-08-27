@@ -49,11 +49,9 @@ public with sharing class Ctrl_AccountSearch {
         if(!String.isEmpty(whereStringbillingCity) || !String.isEmpty(whereStringbillingState) || !String.isEmpty(whereStringbillingCountry))
         {
             FinalQuery = BaseQuery + ' WHERE ' + whereStringbillingCity + whereStringbillingState + whereStringbillingCountry;
-            System.debug('FinalQuery ' + FinalQuery);
             FinalQuery = FinalQuery.substring(0, FinalQuery.length() - 5);
-            System.debug('FinalQuery ' + FinalQuery);
         }
-        
+         
         accounts = Database.query(FinalQuery + LimitString);
 		return null;
     }
